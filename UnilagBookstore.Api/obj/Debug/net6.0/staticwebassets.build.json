@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cGIFCq8yHgRFAgTOtkWLL+GirAOoZ62Llenjy8q432Y=",
+  "Source": "UnilagBookstore.Api",
+  "BasePath": "_content/UnilagBookstore.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
