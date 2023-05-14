@@ -27,7 +27,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj"
+              },
+              "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\UnilagBookstore.Services.csproj": {
+                "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\UnilagBookstore.Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -40,6 +47,12 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -59,6 +72,229 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj",
+        "projectName": "UnilagBookstore.Domain",
+        "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj",
+        "packagesPath": "C:\\Users\\ayodeji.bolanle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ayodeji.bolanle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj",
+        "projectName": "UnilagBookstore.Infrastructure",
+        "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ayodeji.bolanle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ayodeji.bolanle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj": {
+                "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\UnilagBookstore.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\UnilagBookstore.Services.csproj",
+        "projectName": "UnilagBookstore.Services",
+        "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\UnilagBookstore.Services.csproj",
+        "packagesPath": "C:\\Users\\ayodeji.bolanle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ayodeji.bolanle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj": {
+                "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Domain\\UnilagBookstore.Domain.csproj"
+              },
+              "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ayodeji.bolanle\\OneDrive - NLPC PFA\\Documents\\PGD\\project\\UnilagBookStore\\UnilagBookstore.Infrastructure\\UnilagBookstore.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[5.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
