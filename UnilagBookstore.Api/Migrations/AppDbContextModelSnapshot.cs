@@ -24,18 +24,16 @@ namespace UnilagBookstore.Api.Migrations
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.Book", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Author")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BookCategoryId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BookCategoryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -56,9 +54,8 @@ namespace UnilagBookstore.Api.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<string>("Quantity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -67,25 +64,18 @@ namespace UnilagBookstore.Api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserBookId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("BookCategoryId");
-
-                    b.HasIndex("UserBookId");
 
                     b.ToTable("Books");
                 });
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.BookCategory", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -109,16 +99,13 @@ namespace UnilagBookstore.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BookCategory");
+                    b.ToTable("BookCategories");
                 });
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.Order", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -135,8 +122,8 @@ namespace UnilagBookstore.Api.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -145,14 +132,11 @@ namespace UnilagBookstore.Api.Migrations
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.OrderItem", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -166,8 +150,8 @@ namespace UnilagBookstore.Api.Migrations
                     b.Property<int>("LastModifiededBy")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,4)");
@@ -177,20 +161,14 @@ namespace UnilagBookstore.Api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("OrderId");
-
                     b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -220,6 +198,9 @@ namespace UnilagBookstore.Api.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsPasswordLocked")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("LastModifiedAt")
                         .HasColumnType("datetime2");
 
@@ -227,6 +208,13 @@ namespace UnilagBookstore.Api.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LoginAttempt")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -244,11 +232,12 @@ namespace UnilagBookstore.Api.Migrations
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.UserBook", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("uniqueidentifier");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -262,10 +251,14 @@ namespace UnilagBookstore.Api.Migrations
                     b.Property<int>("LastModifiededBy")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserBooks");
                 });
@@ -278,24 +271,31 @@ namespace UnilagBookstore.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UnilagBookstore.Domain.Models.UserBook", null)
-                        .WithMany("Books")
-                        .HasForeignKey("UserBookId");
-
                     b.Navigation("BookCategory");
+                });
+
+            modelBuilder.Entity("UnilagBookstore.Domain.Models.Order", b =>
+                {
+                    b.HasOne("UnilagBookstore.Domain.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("UnilagBookstore.Domain.Models.OrderItem", b =>
                 {
                     b.HasOne("UnilagBookstore.Domain.Models.Book", "Book")
                         .WithMany()
-                        .HasForeignKey("BookId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("UnilagBookstore.Domain.Models.Order", "Order")
                         .WithMany("OrderItems")
-                        .HasForeignKey("OrderId")
+                        .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -304,14 +304,28 @@ namespace UnilagBookstore.Api.Migrations
                     b.Navigation("Order");
                 });
 
+            modelBuilder.Entity("UnilagBookstore.Domain.Models.UserBook", b =>
+                {
+                    b.HasOne("UnilagBookstore.Domain.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("UnilagBookstore.Domain.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("UnilagBookstore.Domain.Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
-                });
-
-            modelBuilder.Entity("UnilagBookstore.Domain.Models.UserBook", b =>
-                {
-                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }
